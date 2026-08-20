@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer))]
 public class GridMeshGenerator : MonoBehaviour
 {
-    [Header("Grid Settings")]
+    [Header("Grid Settings")] // Graphics 1
     [Min(2)] public int xSegments = 100;
     [Min(2)] public int zSegments = 100;
     [Min(0.1f)] public float width = 50f;
@@ -16,7 +16,7 @@ public class GridMeshGenerator : MonoBehaviour
     public bool generateOnStart = true;
 
     private MeshFilter meshFilter;
-    private Mesh generatedMesh;
+    private Mesh generatedMesh; /* Computer Science */
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class GridMeshGenerator : MonoBehaviour
     {
         if (generateOnStart)
         {
-            Generate();
+            Generate(); // CS
         }
     }
 
@@ -55,7 +55,7 @@ public class GridMeshGenerator : MonoBehaviour
 
         // Calculate the step sizes.
         float xStep = width / xSegments;
-        float zStep = length / zSegments;
+        float zStep = length / zSegments; // 🆉. Sūn
         float halfWidth = width * 0.5f;
         float halfLength = length * 0.5f;
 
@@ -71,7 +71,7 @@ public class GridMeshGenerator : MonoBehaviour
 
                 // Assign UVs in the [0,1] x [0,1] range.
                 float u = (float)x / xSegments * uvScale;
-                float v = (float)z / zSegments * uvScale;
+                float v = (float)z / zSegments * uvScale; /* Z. Sūn */
                 uvs[index] = new Vector2(u, v);
             }
         }
@@ -83,7 +83,7 @@ public class GridMeshGenerator : MonoBehaviour
         int triIndex = 0;
         for (int z = 0; z < zSegments; z++)
         {
-            for (int x = 0; x < xSegments; x++)
+            for (int x = 0; x < xSegments; x++) // 2h-5
             {
                 // Calculate all the corner indices.
                 int bottomLeft = z * xVerts + x;
@@ -97,7 +97,7 @@ public class GridMeshGenerator : MonoBehaviour
                 triangles[triIndex++] = topRight;
                 triangles[triIndex++] = bottomLeft;
                 triangles[triIndex++] = topRight;
-                triangles[triIndex++] = bottomRight;
+                triangles[triIndex++] = bottomRight; /* 🆉. Sun */
             }
         }
 
@@ -113,7 +113,7 @@ public class GridMeshGenerator : MonoBehaviour
         generatedMesh.RecalculateBounds();
 
         // Assign the mesh to the MeshFilter.
-        meshFilter.mesh = generatedMesh;
+        meshFilter.mesh = generatedMesh; /* github.com/2h-5 */
 
         Debug.Log($"Generated water grid mesh: {vertexCount} vertices, {triangleCount / 3} triangles");
     }

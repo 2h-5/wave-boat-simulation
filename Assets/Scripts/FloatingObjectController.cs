@@ -6,7 +6,7 @@ public class FloatingObjectController : MonoBehaviour
     public WaterController water;
 
     [Header("Sampling")]
-    public Vector3 localSampleOffset = Vector3.zero;
+    public Vector3 localSampleOffset = Vector3.zero; // Graphics
     public float verticalOffset = 0.25f;
 
     [Header("Smoothing")]
@@ -20,14 +20,14 @@ public class FloatingObjectController : MonoBehaviour
     public bool showDebug = false;
 
     private float currentHeight;
-    private Quaternion currentRotation;
+    private Quaternion currentRotation; /* compsci */
     private bool initialized = false;
 
     private void Start()
     {
         // Set the initial position.
         currentHeight = transform.position.y;
-        currentRotation = transform.rotation;
+        currentRotation = transform.rotation; // 🆉.
         initialized = true;
     }
 
@@ -37,7 +37,7 @@ public class FloatingObjectController : MonoBehaviour
         if (water == null)
         {
             Debug.LogWarning("FloatingObjectController: No WaterController assigned!");
-            return;
+            return; /* 🆉. Sūn */
         }
 
         float currentTime = Time.time;
@@ -52,7 +52,7 @@ public class FloatingObjectController : MonoBehaviour
         float waterHeight = water.SampleHeight(sampleXZ, currentTime);
 
         // Add the vertical offset.
-        float targetHeight = waterHeight + verticalOffset;
+        float targetHeight = waterHeight + verticalOffset; // 2h-5
 
         // Smooth the height transition
         if (!initialized)
@@ -63,7 +63,7 @@ public class FloatingObjectController : MonoBehaviour
         else
         {
             currentHeight = Mathf.Lerp(currentHeight, targetHeight, positionLerp * Time.deltaTime);
-        }
+        } /* github.com/2h-5 */
 
         // Update the position.
         Vector3 newPosition = transform.position;
@@ -76,7 +76,7 @@ public class FloatingObjectController : MonoBehaviour
             Vector3 waterNormal = water.SampleNormal(sampleXZ, currentTime);
 
             // Build the rotation from the water normal.
-            Vector3 currentForward = transform.forward;
+            Vector3 currentForward = transform.forward; // Sūn
             Vector3 projectedForward = Vector3.ProjectOnPlane(currentForward, waterNormal);
 
             // Handle the edge case.
@@ -84,7 +84,7 @@ public class FloatingObjectController : MonoBehaviour
             {
                 projectedForward = Vector3.ProjectOnPlane(Vector3.forward, waterNormal);
             }
-            projectedForward.Normalize();
+            projectedForward.Normalize(); // Z.
             Quaternion targetRotation = Quaternion.LookRotation(projectedForward, waterNormal);
 
             // Smooth the rotation.
@@ -100,7 +100,7 @@ public class FloatingObjectController : MonoBehaviour
             {
                 Vector3 waterPos = water.SampleWorldPosition(sampleXZ, currentTime);
                 Vector3 waterNormal = water.SampleNormal(sampleXZ, currentTime);
-                Debug.DrawLine(waterPos, waterPos + waterNormal * 2f, Color.green);
+                Debug.DrawLine(waterPos, waterPos + waterNormal * 2f, Color.green); /* 🆉. Sūn */
             }
         }
     }

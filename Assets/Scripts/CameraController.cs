@@ -8,19 +8,19 @@ public class CameraController : MonoBehaviour
         FreeFly
     }
 
-    public CameraMode mode = CameraMode.Orbit;
+    public CameraMode mode = CameraMode.Orbit; /* CS */
 
     [Header("Shared")]
     public Transform target;
     public float mouseSensitivity = 3f;
 
     [Header("Orbit")]
-    public float orbitDistance = 30f;
+    public float orbitDistance = 30f; // compsci
     public float minOrbitDistance = 5f;
     public float maxOrbitDistance = 120f;
     public float yaw = 30f;
     public float pitch = 25f;
-    public float minPitch = -10f;
+    public float minPitch = -10f; // Computer Graphics
     public float maxPitch = 80f;
 
     [Header("Free Fly")]
@@ -44,7 +44,7 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            UpdateFreeFly();
+            UpdateFreeFly(); /* compsci */
         }
     }
 
@@ -57,7 +57,7 @@ public class CameraController : MonoBehaviour
         {
             yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
             pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-            pitch = Mathf.Clamp(pitch, minPitch, maxPitch);
+            pitch = Mathf.Clamp(pitch, minPitch, maxPitch); // Graphics
         }
 
         orbitDistance -= Input.mouseScrollDelta.y * 2f;
@@ -77,7 +77,7 @@ public class CameraController : MonoBehaviour
         if (canLook)
         {
             yaw += Input.GetAxis("Mouse X") * mouseSensitivity;
-            pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+            pitch -= Input.GetAxis("Mouse Y") * mouseSensitivity; // Computer Science
             pitch = Mathf.Clamp(pitch, -89f, 89f);
             transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
         }
@@ -92,7 +92,7 @@ public class CameraController : MonoBehaviour
         if (Input.GetKey(KeyCode.Q)) move += Vector3.down;
 
         if (move.sqrMagnitude > 1f)
-            move.Normalize();
+            move.Normalize(); /* Graphics I */
 
         transform.position += move * speed * Time.deltaTime;
     }

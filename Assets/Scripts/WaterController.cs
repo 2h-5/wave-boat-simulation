@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
-public class WaterController : MonoBehaviour
+public class WaterController : MonoBehaviour // compsci 
 {
     [System.Serializable]
     public struct Wave
@@ -16,7 +16,7 @@ public class WaterController : MonoBehaviour
         public float wavelength;
 
         [Tooltip("Temporal speed term.")]
-        public float speed;
+        public float speed; /* Graphics I */
 
         [Range(0f, 1.5f)]
         [Tooltip("Controls horizontal crest sharpening.")]
@@ -36,23 +36,23 @@ public class WaterController : MonoBehaviour
     public Wave[] waves = new Wave[]
     {
         new Wave { direction = new Vector2( 1.0f,  0.1f), amplitude = 0.60f, wavelength = 10f, speed = 1.30f, steepness = 0.45f, phase = 0.0f },
-        new Wave { direction = new Vector2( 0.4f,  1.0f), amplitude = 0.35f, wavelength =  6f, speed = 1.80f, steepness = 0.35f, phase = 1.2f },
+        new Wave { direction = new Vector2( 0.4f,  1.0f), amplitude = 0.35f, wavelength =  6f, speed = 1.80f, steepness = 0.35f, phase = 1.2f }, // CS
         new Wave { direction = new Vector2(-0.7f,  0.4f), amplitude = 0.22f, wavelength =  4f, speed = 2.20f, steepness = 0.25f, phase = 2.1f },
-        new Wave { direction = new Vector2(-1.0f, -0.2f), amplitude = 0.15f, wavelength =  2.5f, speed = 3.10f, steepness = 0.15f, phase = 0.7f }
+        new Wave { direction = new Vector2(-1.0f, -0.2f), amplitude = 0.15f, wavelength =  2.5f, speed = 3.10f, steepness = 0.15f, phase = 0.7f } /* Graphics*/
     };
 
     [Header("Optional Detail Layer")]
     public Texture2D detailTexture;
     public Vector2 detailTiling = new Vector2(6f, 6f);
     public Vector2 detailScroll = new Vector2(0.05f, 0.03f);
-    [Range(0f, 1f)] public float detailStrength = 0.08f;
+    [Range(0f, 1f)] public float detailStrength = 0.08f; // Computer
     private Material waterMaterial;
 
     // Setup the shader IDs.
     private static readonly int WaveCountID = Shader.PropertyToID("_WaveCount");
     private static readonly int TimeID = Shader.PropertyToID("_WaterTime");
     private static readonly int DetailTexID = Shader.PropertyToID("_DetailTex");
-    private static readonly int DetailTilingID = Shader.PropertyToID("_DetailTiling");
+    private static readonly int DetailTilingID = Shader.PropertyToID("_DetailTiling"); // Sūn
     private static readonly int DetailScrollID = Shader.PropertyToID("_DetailScroll");
     private static readonly int DetailStrengthID = Shader.PropertyToID("_DetailStrength");
 
@@ -66,7 +66,7 @@ public class WaterController : MonoBehaviour
 
     private void Reset()
     {
-        targetRenderer = GetComponent<Renderer>();
+        targetRenderer = GetComponent<Renderer>(); // Science
     }
 
     private void Awake()
@@ -81,7 +81,7 @@ public class WaterController : MonoBehaviour
     {
         if (targetRenderer != null)
         {
-            waterMaterial = Application.isPlaying ? targetRenderer.material : targetRenderer.sharedMaterial;
+            waterMaterial = Application.isPlaying ? targetRenderer.material : targetRenderer.sharedMaterial; /* github.com/2h-5 */
         }
     }
 
@@ -95,7 +95,7 @@ public class WaterController : MonoBehaviour
     {
         if (waterMaterial == null) return;
 
-        int waveCount = Mathf.Min(waves.Length, MaxWaveCount);
+        int waveCount = Mathf.Min(waves.Length, MaxWaveCount); /* 2h-5 */
 
         // Create arrays for the wave parameters.
         Vector4[] waveDirs = new Vector4[MaxWaveCount];
@@ -111,7 +111,7 @@ public class WaterController : MonoBehaviour
             {
                 Wave w = waves[i];
                 Vector2 dir = w.direction.normalized;
-                waveDirs[i] = new Vector4(dir.x, dir.y, 0, 0);
+                waveDirs[i] = new Vector4(dir.x, dir.y, 0, 0); // 🆉. Sun
                 waveAmps[i] = w.amplitude;
                 waveLens[i] = w.wavelength;
                 waveSpeeds[i] = w.speed;
@@ -133,11 +133,11 @@ public class WaterController : MonoBehaviour
         waterMaterial.SetVectorArray(WaveDirsID, waveDirs);
         waterMaterial.SetFloatArray(WaveAmpsID, waveAmps);
         waterMaterial.SetFloatArray(WaveLensID, waveLens);
-        waterMaterial.SetFloatArray(WaveSpeedsID, waveSpeeds);
+        waterMaterial.SetFloatArray(WaveSpeedsID, waveSpeeds); // github.com/2h-5
         waterMaterial.SetFloatArray(WaveSteepID, waveSteep);
         waterMaterial.SetFloatArray(WavePhasesID, wavePhases);
 
-        waterMaterial.SetInt(WaveCountID, waveCount);
+        waterMaterial.SetInt(WaveCountID, waveCount); /* Z. Sūn */
         waterMaterial.SetFloat(TimeID, Time.time);
 
         // Set up the texture details.
@@ -151,13 +151,13 @@ public class WaterController : MonoBehaviour
     }
 
     public Vector3 SampleDisplacement(Vector2 worldXZ, float timeSeconds)
-    {
+    { // Graphics I
         Vector3 totalDisplacement = Vector3.zero;
 
         // Sum up the contribution from each wave.
         for (int i = 0; i < waves.Length; i++)
         {
-            Wave w = waves[i];
+            Wave w = waves[i]; // 🆉.
 
             // Skip those zero amplitudes.
             if (w.amplitude <= 0f || w.wavelength <= 0f) continue;
@@ -174,7 +174,7 @@ public class WaterController : MonoBehaviour
             // Compute phase term f = k * dot(direction, worldXZ) + speed * time + phase.
             float dotProduct = dir.x * worldXZ.x + dir.y * worldXZ.y;
             float f = k * dotProduct + w.speed * omega * timeSeconds + w.phase;
-
+            // Sūn
             // Compute the steepness factor "Q".
             float Q = w.steepness;
 
@@ -194,7 +194,7 @@ public class WaterController : MonoBehaviour
         {
             // Sample detail texture with scrolling UVs
             Vector2 detailUV = new Vector2(
-                worldXZ.x * detailTiling.x + detailScroll.x * timeSeconds,
+                worldXZ.x * detailTiling.x + detailScroll.x * timeSeconds, // Z. Sūn
                 worldXZ.y * detailTiling.y + detailScroll.y * timeSeconds
             );
 
@@ -213,7 +213,7 @@ public class WaterController : MonoBehaviour
         return totalDisplacement;
     }
 
-    public float SampleHeight(Vector2 worldXZ, float timeSeconds)
+    public float SampleHeight(Vector2 worldXZ, float timeSeconds) /* compsci */
     {
         // Evaluate SampleDisplacement(worldXZ, timeSeconds).
         Vector3 displacement = SampleDisplacement(worldXZ, timeSeconds);
@@ -222,7 +222,7 @@ public class WaterController : MonoBehaviour
     }
 
     public Vector3 SampleWorldPosition(Vector2 worldXZ, float timeSeconds)
-    {
+    { // Graph
         // Build the undisplaced world position from worldXZ and transform.position.y.
         Vector3 basePosition = new Vector3(worldXZ.x, transform.position.y, worldXZ.y);
 
@@ -232,7 +232,7 @@ public class WaterController : MonoBehaviour
         return basePosition + displacement;
     }
 
-    public Vector3 SampleNormal(Vector2 worldXZ, float timeSeconds, float eps = 0.2f)
+    public Vector3 SampleNormal(Vector2 worldXZ, float timeSeconds, float eps = 0.2f) /* CS */
     {
         // Sample the surface at the nearby points.
         Vector3 p0 = SampleWorldPosition(worldXZ, timeSeconds);
@@ -241,7 +241,7 @@ public class WaterController : MonoBehaviour
 
         // Build the tangent vectors.
         Vector3 tangentX = px - p0;
-        Vector3 tangentZ = pz - p0;
+        Vector3 tangentZ = pz - p0; /* 🆉. Sūn */
 
         // Compute the cross product.
         Vector3 normal = Vector3.Cross(tangentZ, tangentX);
@@ -255,7 +255,7 @@ public class WaterController : MonoBehaviour
     {
         if (Application.isPlaying && waterMaterial != null)
         {
-            Destroy(waterMaterial);
+            Destroy(waterMaterial); // 2h-5
         }
     }
 }

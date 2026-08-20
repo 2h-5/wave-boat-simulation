@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639226084404564862
-    m_Hash: 1963157244
+      ticks: 639228484278519379
+    m_Hash: 3411266789
   m_LockFileStatus:
     m_FilePath: C:/Users/HONOR/Desktop/Git/wave-boat-simulation/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639226084404679931
-    m_Hash: 3769358423
+      ticks: 639228484278543092
+    m_Hash: 3034174635
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -2852,13 +2852,15 @@ m_ResolvedPackages:
     - 2.0.25
     - 2.0.26
     - 2.0.27
+    - 2.0.28
     compatible:
     - 2.0.22
     - 2.0.23
     - 2.0.25
     - 2.0.26
     - 2.0.27
-    recommended: 2.0.27
+    - 2.0.28
+    recommended: 2.0.28
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
