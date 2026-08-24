@@ -1496,6 +1496,7 @@ MonoBehaviour:
   mode: 0
   target: {fileID: 373084820}
   mouseSensitivity: 3
+  touchSensitivity: 0.5
   orbitDistance: 30
   minOrbitDistance: 5
   maxOrbitDistance: 120
@@ -1566,9 +1567,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Hi, welcome to my \"Wave & Boat\" water simulation demo. \n(I would call
     it a GAME demo as it's quite fun to play... Of course it should, this was made
-    on game engine.)\nHere are some tips for you to explore around:\n1. Do RIGHT
-    click and drag to interact with camera!\n2. Scroll the wheel to see what will
-    happen.\nHave fun with my work!\n                                                                 
+    on game engine.)\nHere are some tips for you to explore around:\n1. Click and
+    drag to interact with the camera!\n2. Scroll the wheel (or pinch) to see what
+    will happen.\nHave fun with my work!\n                                                                 
     \u2014Z."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

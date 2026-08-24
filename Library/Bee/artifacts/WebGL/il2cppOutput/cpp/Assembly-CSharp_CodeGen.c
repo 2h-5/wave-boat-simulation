@@ -1,0 +1,170 @@
+﻿#include "pch-c.h"
+#ifndef _MSC_VER
+# include <alloca.h>
+#else
+# include <malloc.h>
+#endif
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void CameraController_Start_m8EAAC188934ECCBD009EC00751280DCFF4D96C71 (void);
+extern void CameraController_Update_mBCB871B23DBA60444D43AB56D780478BA3D355E6 (void);
+extern void CameraController_UpdateOrbit_m6900E879C861DC0186CB832F94B39E367CAAE39F (void);
+extern void CameraController_HandleMouseInput_mF203F48FCB18D129CAEC1FD12A8EC3A86E7E021A (void);
+extern void CameraController_HandleTouchInput_m07A719105AFEFAB7C4F5F03191FD1145ABC6BE38 (void);
+extern void CameraController_UpdateFreeFly_mBCC5A726E41F977D76A170FEDA4F9A041E01ABA1 (void);
+extern void CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950 (void);
+extern void FloatingObjectController_Start_mD2F35EF079952F97D873B36CA4A8DD7AF38B9488 (void);
+extern void FloatingObjectController_LateUpdate_mA42BD0E1B27508248F03D67227A2FEE196A0B9D7 (void);
+extern void FloatingObjectController_OnValidate_m3CEE433B080050D62DE3ED3490507613F390B390 (void);
+extern void FloatingObjectController_OnDrawGizmosSelected_m7FC27BCF8604B6D7A6A5705240F398EE9D78BDBE (void);
+extern void FloatingObjectController__ctor_mB13F0644D6131B18E6457BEB2BD326CA74D0AD70 (void);
+extern void GridMeshGenerator_Awake_m7DB95F06C1F63B9E9D827D5E3BE1F6932DF00E02 (void);
+extern void GridMeshGenerator_Start_mD36CAFA44D7DDA62E2A208D3E274E04236092B8A (void);
+extern void GridMeshGenerator_Generate_mE97C9A5A69C1D0C8A9CB9116AD2555E8EE02092E (void);
+extern void GridMeshGenerator_RegenerateMesh_m0A4B4C6608769D4D911EA67CB0A1D1D96A4FFA1A (void);
+extern void GridMeshGenerator__ctor_m7EE32C492F13DAEE961EAF3DA3B8FEBF0E876A91 (void);
+extern void InstructionWindow_CloseInstructionWindow_m94D8007FCADCD6EA061171E8C34E3331210F83CE (void);
+extern void InstructionWindow_OpenInstructionWindow_mE4D48FE483FA7A602FFB43CD6E3C6F9F4A773F76 (void);
+extern void InstructionWindow__ctor_m48FB055DE5878124457FA4B9078A6A8A0953BE0F (void);
+extern void NoiseTextureGenerator_Start_m3F171DE862737EA44A9BAF3354F77E434DCC5290 (void);
+extern void NoiseTextureGenerator_GenerateTextures_mC0FEEEE2CC46A27E476EF03129A75E4B57760833 (void);
+extern void NoiseTextureGenerator_GenerateNoiseTexture_m342D6C1F933BDA09A3C4175530C6B7BB89848765 (void);
+extern void NoiseTextureGenerator_GenerateNormalMapFromHeight_m69B2307DA106E027110990C44A73E265938F3934 (void);
+extern void NoiseTextureGenerator_ApplyToWaterController_mFA3C37A13D5BB05EC31DD2422ABC40B74161E7A8 (void);
+extern void NoiseTextureGenerator__ctor_mF5BCB20D2C1A19503FC38E104922C6CCAB5C8FA1 (void);
+extern void TMPLinkOpener_Awake_mD27CAB4437C6B4D4C3F36A2BC1D6ACF72018A496 (void);
+extern void TMPLinkOpener_OnPointerClick_m28E392F5235D1580F51915D4B732BF26B9B3C284 (void);
+extern void TMPLinkOpener__ctor_m5885957D2B77B3530A56BEDE7917E411A5B18FF1 (void);
+extern void WaterController_Reset_mB7E835ADB27474C882FA7E3C18CA9F576D1DD789 (void);
+extern void WaterController_Awake_m720D0D3A6014CECFB2A987F40AC760EE6E54ECEA (void);
+extern void WaterController_Start_m8DC5811DAE0EF67D7372EAC88EC847D03440B695 (void);
+extern void WaterController_Update_m37EDA5BFEC0AF2AE32A6A72D4A17CA2C85B05C75 (void);
+extern void WaterController_PushWaveDataToShader_mABF5A363C9D160B912198D8EFB7272F8F6569D44 (void);
+extern void WaterController_SampleDisplacement_m2A9DCE71657DAE93D82A29689D0231E9F9CA8B38 (void);
+extern void WaterController_SampleHeight_m14753A0D469C9B8689CDCDE2F343D740C3B805E1 (void);
+extern void WaterController_SampleWorldPosition_m975DF63A240F6A64BEA91EC8D899D973BFEF7C06 (void);
+extern void WaterController_SampleNormal_mE1AC9A48139F6B2117088374E843859DED65E7EE (void);
+extern void WaterController_OnDestroy_m5F091630831E738A04D3F13DE91A2917E2B951FC (void);
+extern void WaterController__ctor_m4CBA7FE8057272B50AF22AFE22C690E4C9CC25BC (void);
+extern void WaterController__cctor_mB5C23B2CB79A0D3A9CCA0E8F69867213F6CD59D8 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
+static Il2CppMethodPointer s_methodPointers[43] = 
+{
+	CameraController_Start_m8EAAC188934ECCBD009EC00751280DCFF4D96C71,
+	CameraController_Update_mBCB871B23DBA60444D43AB56D780478BA3D355E6,
+	CameraController_UpdateOrbit_m6900E879C861DC0186CB832F94B39E367CAAE39F,
+	CameraController_HandleMouseInput_mF203F48FCB18D129CAEC1FD12A8EC3A86E7E021A,
+	CameraController_HandleTouchInput_m07A719105AFEFAB7C4F5F03191FD1145ABC6BE38,
+	CameraController_UpdateFreeFly_mBCC5A726E41F977D76A170FEDA4F9A041E01ABA1,
+	CameraController__ctor_mE196A6332BDDED632D6F9DB6260E424594598950,
+	FloatingObjectController_Start_mD2F35EF079952F97D873B36CA4A8DD7AF38B9488,
+	FloatingObjectController_LateUpdate_mA42BD0E1B27508248F03D67227A2FEE196A0B9D7,
+	FloatingObjectController_OnValidate_m3CEE433B080050D62DE3ED3490507613F390B390,
+	FloatingObjectController_OnDrawGizmosSelected_m7FC27BCF8604B6D7A6A5705240F398EE9D78BDBE,
+	FloatingObjectController__ctor_mB13F0644D6131B18E6457BEB2BD326CA74D0AD70,
+	GridMeshGenerator_Awake_m7DB95F06C1F63B9E9D827D5E3BE1F6932DF00E02,
+	GridMeshGenerator_Start_mD36CAFA44D7DDA62E2A208D3E274E04236092B8A,
+	GridMeshGenerator_Generate_mE97C9A5A69C1D0C8A9CB9116AD2555E8EE02092E,
+	GridMeshGenerator_RegenerateMesh_m0A4B4C6608769D4D911EA67CB0A1D1D96A4FFA1A,
+	GridMeshGenerator__ctor_m7EE32C492F13DAEE961EAF3DA3B8FEBF0E876A91,
+	InstructionWindow_CloseInstructionWindow_m94D8007FCADCD6EA061171E8C34E3331210F83CE,
+	InstructionWindow_OpenInstructionWindow_mE4D48FE483FA7A602FFB43CD6E3C6F9F4A773F76,
+	InstructionWindow__ctor_m48FB055DE5878124457FA4B9078A6A8A0953BE0F,
+	NoiseTextureGenerator_Start_m3F171DE862737EA44A9BAF3354F77E434DCC5290,
+	NoiseTextureGenerator_GenerateTextures_mC0FEEEE2CC46A27E476EF03129A75E4B57760833,
+	NoiseTextureGenerator_GenerateNoiseTexture_m342D6C1F933BDA09A3C4175530C6B7BB89848765,
+	NoiseTextureGenerator_GenerateNormalMapFromHeight_m69B2307DA106E027110990C44A73E265938F3934,
+	NoiseTextureGenerator_ApplyToWaterController_mFA3C37A13D5BB05EC31DD2422ABC40B74161E7A8,
+	NoiseTextureGenerator__ctor_mF5BCB20D2C1A19503FC38E104922C6CCAB5C8FA1,
+	TMPLinkOpener_Awake_mD27CAB4437C6B4D4C3F36A2BC1D6ACF72018A496,
+	TMPLinkOpener_OnPointerClick_m28E392F5235D1580F51915D4B732BF26B9B3C284,
+	TMPLinkOpener__ctor_m5885957D2B77B3530A56BEDE7917E411A5B18FF1,
+	WaterController_Reset_mB7E835ADB27474C882FA7E3C18CA9F576D1DD789,
+	WaterController_Awake_m720D0D3A6014CECFB2A987F40AC760EE6E54ECEA,
+	WaterController_Start_m8DC5811DAE0EF67D7372EAC88EC847D03440B695,
+	WaterController_Update_m37EDA5BFEC0AF2AE32A6A72D4A17CA2C85B05C75,
+	WaterController_PushWaveDataToShader_mABF5A363C9D160B912198D8EFB7272F8F6569D44,
+	WaterController_SampleDisplacement_m2A9DCE71657DAE93D82A29689D0231E9F9CA8B38,
+	WaterController_SampleHeight_m14753A0D469C9B8689CDCDE2F343D740C3B805E1,
+	WaterController_SampleWorldPosition_m975DF63A240F6A64BEA91EC8D899D973BFEF7C06,
+	WaterController_SampleNormal_mE1AC9A48139F6B2117088374E843859DED65E7EE,
+	WaterController_OnDestroy_m5F091630831E738A04D3F13DE91A2917E2B951FC,
+	WaterController__ctor_m4CBA7FE8057272B50AF22AFE22C690E4C9CC25BC,
+	WaterController__cctor_mB5C23B2CB79A0D3A9CCA0E8F69867213F6CD59D8,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
+};
+static const int32_t s_InvokerIndices[43] = 
+{
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4354,
+	3153,
+	4452,
+	4452,
+	4452,
+	3586,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	4452,
+	1523,
+	1506,
+	1523,
+	884,
+	4452,
+	4452,
+	6397,
+	6401,
+	4452,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
+const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
+{
+	"Assembly-CSharp.dll",
+	43,
+	s_methodPointers,
+	0,
+	NULL,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};
