@@ -27,20 +27,26 @@ Okay, **new stuffs**:
 
 This is my first individual **Unity** project, the idea was from one of my university courses (which I will talk more in the section `Stories Behind the Work`).
 
-*(If you are good at **Unity**, you can probably build a better version by using better models from **Unity Asset Store** and/or manually apply more add-ons.)*
+*(If you are good at **Unity**, you can probably build a better version by using better models from **Unity Asset Store** and/or manually apply more add-ons if you searched online thoroughly yourself.)*
 
-However, I learned to use **coding** to generate a natural dense water surface from scratch, which includes **custom** grid mesh, Gerstner motion, surface lighting and object response.
+However, I learned to use **coding** to generate a natural dense water surface from scratch, which includes **custom** grid mesh, Gerstner motion, surface lighting, object response and more...
 
-And this should make my project unique enough from many other demos online. *(Hopefully...)*
+And this should make my project unique enough from many other demos online. *(In my opinion...)*
 
 ## Features
 
 ###### I have provided some tips in the game demo, but it looks like the window space was compromised, so I have to list more here:
 
-1. See what happens when you do **right click and drag**.
+1. See what happens when you do **click and drag**.
 2. See what happens when you **scroll the wheel**.
 3. If you think the **tips window** is annoying, *there is a way to close it*.
 4. The **text** at the bottom of the game demo **is clickable**. 
+
+> ###### _Updated 2026-08-24: I added finger gestures in "CameraController.cs", so now you can play this demo on your smartphone as long as it is not "outdated". (Ex. Cellphone from last century...)_
+> 
+> ###### The tips for smartphone are quite the same as PC's, except:
+> 1. Use **finger to drag** instead of click-and-drag.
+> 2. Use **two fingers to pinch** instead of mouse wheel.
 
 ## Installation
 
@@ -56,7 +62,8 @@ Compared to my original final project, what I have further developed are:
 
 1. Apply normal reconstruction for additional normal map detail blended in the fragment shader.
 2. Apply extra codings that can add scaled height to break visual regularity, which create a more complex and natural surface motion.
-3. Add annotations for better explanation inside the demo.
+3. Add finger gestures for smartphone users.
+4. Add annotations for better explanation inside the demo.
 
 ## Screenshots
 
